@@ -8,11 +8,11 @@
 
 
 ## 支持向量机
-![线性分类器](image\SVM.jpg)
+![线性分类器](image/SVM.jpg)
 
 &emsp;&emsp;所谓支持向量机是一种分类器，对于做出标记的两组向量，给出一个最优分割超曲面把这两组向量分割到两边，使得两组向量中离此超平面最近的向量（即所谓支持向量）到此超平面的距离都尽可能远。
 
-![SVM-1](image\SVM-1.jpg)
+![SVM-1](image/SVM-1.jpg)
 
 在分类问题中给定输入数据和学习目标： 
 &emsp;&emsp;$X=\{X_1,...,X_N\},y=\{y_1,...,y_N\}$，其中输入数据的每个样本都包含多个特征并由此构成特征空间（feature space）：$X_i=[x_1,...,x_n]\in x$ ，而学习目标为二元变量$y\in\{-1,1\}$表示负类（negative class）和正类（positive class）。
@@ -62,7 +62,7 @@ $$
 
 ### SVM异常值(outlier)
 
-![SVM异常值](image\SVM异常值.jpg)
+![SVM异常值](image/SVM异常值.jpg)
 
 如果按照SVM的定义应该是虚线为分割线。但它不是最好的分割，属于同一类别的点应该相似，存在异常点。实线显然可以应对更常用的情况。
 
@@ -70,15 +70,15 @@ $$
 
 - 处理一：不放松限制
 
-![不放松限制](image\不放松限制.jpg)
+![不放松限制](image/不放松限制.jpg)
 
 - 处理二：放松限制
 
-![放松限制](image\放松限制.jpg)
+![放松限制](image/放松限制.jpg)
 
 - 处理三：必须放松限制
 
-![必须放松限制](image\必须放松.jpg)
+![必须放松限制](image/必须放松.jpg)
 
 ### 带松弛变量的 SVM数学模型
 
@@ -96,7 +96,7 @@ $$
 y_i(w^Tx_i+b)\geq 1-\xi_i ,\xi_i\geq 0 \mapsto \xi_i\geq 1-y_i(w^Tx_i+b) \\
 \mapsto \xi_i=max(0,1-y_i(w^Tx_i+b))
 $$
-![Hinge Loss](image\HingeLoss.jpg)
+![Hinge Loss](image/HingeLoss.jpg)
 
 
 - Convex凸函数，容易优化
@@ -174,16 +174,16 @@ w^T\phi(x)+b=\sum_i\alpha_iy_ik(x_i,x)+b\\
 只有当x_i为支持向量的时候，\alpha_i>0
 $$ 
 
-![why用核函数](image\why用核函数.jpg)
+![why用核函数](image/why用核函数.jpg)
 
-![映射到高维](image\映射到高维.jpg)
+![映射到高维](image/映射到高维.jpg)
 
 $$
 \phi:\chi \mapsto \hat\chi=\phi(x)\\
 \phi([x_{i1},x_{i2}])=[x_{i1},x_{i2},x_{i1}x_{i2},x_{i1}^2,x_{i2}^2]
 $$
 
-![核函数映射到二维](image\核函数映射到二维.jpg)
+![核函数映射到二维](image/核函数映射到二维.jpg)
 
 ## 直接扩展到高维的问题
 一、增加了计算量
@@ -227,14 +227,14 @@ $$
 $$K(x_i,x_j)=exp(-\frac{||x_i-x_j||_2^2}{2\sigma^2})$$
 &emsp;&emsp;当$x_i=x_j$,值为1，当$x_i$与$x_j$距离增加，值倾向于0使用高斯核之前需要将特征正规化(因为要相减)
 
-![高斯核参数的意义](image\高斯核参数的意义.jpg)
+![高斯核参数的意义](image/高斯核参数的意义.jpg)
 
 
 ### 高斯核例子
-![高斯核例子](image\高斯核例子.jpg)
+![高斯核例子](image/高斯核例子.jpg)
 
 
-![高斯核例子结果](image\高斯核例子结果.jpg)
+![高斯核例子结果](image/高斯核例子结果.jpg)
 
 
 ## Sigmoid Kernel
