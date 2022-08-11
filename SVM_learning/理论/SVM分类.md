@@ -117,7 +117,7 @@ $$
 
 2.OVO(one versus one),对于K个类别的情况，训练K*(K-1)/2个SVM，每一个 SVM只用于判读任意条数据是属于K中的特定两个类别.预测的时候,使用K*(K-1)/2个SVM做K*(K-1)/2次预测，使用计票的方式决定数据被分类为哪个类别的次数最多，就认为数据x属于此类别。
 
-![twotypeSVM](image\twotypeSVM.jpg)
+![twotypeSVM](image/twotypeSVM.jpg)
 
 ## SVM 拓展(将带松弛变量的 SVM最优化问题，添加拉格朗日算子，转化为一个新的最优化问题)
 原问题(最小化)：
@@ -153,7 +153,7 @@ $$
 
 ## SVM的对偶形式
 
-![SVM的对偶形式](image\SVM对偶形式.jpg)
+![SVM的对偶形式](image/SVM对偶形式.jpg)
 
 ## 使用核函数
 $$
